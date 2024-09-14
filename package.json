@@ -20,6 +20,7 @@
   ],
   "scripts": {
     "prebuild": "rimraf lib",
+    "prepack": "npm run build",
     "build": "babel --quiet --out-dir lib src",
     "postbuild": "npm run copy-metafiles",
     "copy-metafiles": "node --require babel-register ./scripts/copyMetafiles",
